@@ -1,0 +1,174 @@
+/* PAGE BACKGROUND */
+
+body {
+    background-color: #b49e90;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 40' width='80' height='40'%3E%3Cpath fill='%2356903a' fill-opacity='0.56' d='M0 40a19.96 19.96 0 0 1 5.9-14.11 20.17 20.17 0 0 1 19.44-5.2A20 20 0 0 1 20.2 40H0zM65.32.75A20.02 20.02 0 0 1 40.8 25.26 20.02 20.02 0 0 1 65.32.76zM.07 0h20.1l-.08.07A20.02 20.02 0 0 1 .75 5.25 20.08 20.08 0 0 1 .07 0zm1.94 40h2.53l4.26-4.24v-9.78A17.96 17.96 0 0 0 2 40zm5.38 0h9.8a17.98 17.98 0 0 0 6.67-16.42L7.4 40zm3.43-15.42v9.17l11.62-11.59c-3.97-.5-8.08.3-11.62 2.42zm32.86-.78A18 18 0 0 0 63.85 3.63L43.68 23.8zm7.2-19.17v9.15L62.43 2.22c-3.96-.5-8.05.3-11.57 2.4zm-3.49 2.72c-4.1 4.1-5.81 9.69-5.13 15.03l6.61-6.6V6.02c-.51.41-1 .85-1.48 1.33zM17.18 0H7.42L3.64 3.78A18 18 0 0 0 17.18 0zM2.08 0c-.01.8.04 1.58.14 2.37L4.59 0H2.07z'%3E%3C/path%3E%3C/svg%3E");
+}
+
+
+/* HEADER */
+
+#header {
+    font-family: 'Dancing Script', cursive;
+    display: block;
+    text-align: center;
+    font-size: 50px;
+}
+
+.aboutNationalParks {
+    display: block;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+#button {
+    display: block;
+    text-align: center;
+}
+
+.submit {
+    border-radius: 40px;
+    background: #56903A;
+    color: #fff;
+    box-shadow: 0 6px #213A1B;
+    transition: none;
+    border: none;
+    font-family: 'Dancing Script', cursive;
+    font-size: 30px;
+    cursor: pointer;
+    padding: 10px 50px;
+    margin: 15px 30px;
+    letter-spacing: 1px;
+    font-weight: 700;
+    outline: none;
+}
+
+
+/*POSTCARD FRONT*/
+
+.postcardFront {
+    display: block;
+    position: relative;
+    transform: rotate(-7deg);
+    width: 740px;
+    height: 498px;
+    margin-top: 30px;
+    margin-left: 50px;
+    background-color: whitesmoke;
+    box-shadow: 7px 7px 20px #555;
+}
+
+.postcardImage {
+    display: block;
+    position: absolute;
+    text-align: center;
+    width: 730px;
+    height: 488px;
+    background-size: 600px;
+    margin: 5px;
+}
+
+.text-container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    box-sizing: border-box;
+    z-index: 2;
+    padding: 15px 27px;
+}
+
+.postcardText {
+    font-family: Arial, sans-serif;
+    font-size: 60px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white;
+    position: absolute;
+    left: 0;
+    padding-left: 27px;
+    bottom: 0;
+    padding-bottom: 15px;
+    right: 140px;
+    z-index: 2;
+}
+
+p {
+    margin: 0;
+}
+
+/*END POSTCARD FRONT*/
+
+
+/*POSTCARD BACK*/
+
+body {
+    margin: 0;
+    font-size: 21px;
+    box-sizing: border-box;
+}
+
+.postcardBack {
+    display: block;
+    position: relative;
+    transform: rotate(5deg);
+    width: 740px;
+    height: 498px;
+    margin-left: 500px;
+    background: url('https://developer.mozilla.org/files/4151/background.jpg');
+    /*img from: https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Forms/Styling_HTML_forms */
+    font-family: "MedievalSharp";
+    border: 2px solid #ccc;
+    box-shadow: 7px 7px 20px #555;
+}
+
+.parkName {
+    font-family: "Homemade Apple";
+    right: 40px;
+    top: 185px;
+    position: absolute;
+}
+
+.parkLocation {
+    font-family: "Homemade Apple";
+    right: 40px;
+    top: 235px;
+    position: absolute;
+}
+
+.parkWebsite {
+    font-family: "Homemade Apple";
+    font-size: 14px;
+    right: 40px;
+    top: 290px;
+    position: absolute;
+}
+
+.aboutPark {
+    display: block;
+    position: absolute;
+    font-family: "Homemade Apple";
+    text-align: center;
+    font-size: 13.5px;
+    left: 20px;
+    right: 375px;
+    top: 150px;
+    background: transparent;
+    letter-spacing: 3px;
+    line-height: 1.5em;
+    /*How to make sure text doesn't overflow?*/
+}
+
+/* THINGS TO-DO LIST */
+
+.thingsList {
+    display: inline-block;
+    position: absolute;
+    width: 300px;
+    height: 400px;
+    margin-left: 100px;
+    margin-top: 100px;
+    background-color: whitesmoke;
+    box-shadow: 7px 7px 20px #555;
+}
