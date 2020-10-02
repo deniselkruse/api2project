@@ -6,68 +6,98 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>API #2</title>
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Homemade+Apple" />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;600;700;800;900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/b052ae7eaa.js" crossorigin="anonymous"></script>
     <link href="styles.css" rel="stylesheet">
 </head>
 
 <body>
+    <hr>
+    <h1 class="header">EXPLORE THE NATIONAL PARKS</h1>
+    <hr>
 
-    <h1 id="header">Not all those who wander are lost.</h1>
+    <div class="container">
+        <p class="aboutNationalParks">
+            The National Park System spans across more than 84
+            million acres in each state and extends into the territories, including parks in Puerto Rico, the
+            Virgin Islands,
+            American Samoa, and Guam.</p><br>
 
-    <p class="aboutNationalParks">
-        The National Park System encompasses 421 national park sites in the United States. They span across more than 84
-        million acres in each state and extend into the territories, including parks in Puerto Rico, the Virgin Islands,
-        American Samoa, and Guam.
-        They include landscapes and historical narratives within areas that interpret our nation’s past, and cultural
-        and recreation areas that stretch our minds and bodies to learn and do more.
-        <br><br> With over 400 places for you to find your park, where will go you next?
-    </p>
-    <br>
+        <p class="aboutNationalParks">
+            Parks include landscapes and historical narratives within areas that interpret our nation’s past, and cultural
+            and recreation areas.
+        </p>
+        <hr>
+        <p class="over400Places">
+            With 421 National Parks to explore, <br>where will go you next?
+        </p>
+    </div>
+    <hr>
 
     <form id="button">
-        <button class="submit">Explore</button>
+        <button class="submit"><i class="fas fa-tree"></i> Explore <i class="fas fa-tree"></i></button>
     </form>
     <br>
 
-    <!-- POSTCARD FRONT  -->
-    <div class="postcardFront">
+    <div class="container" class="postcardContainer">
+        <div class="row">
+            <div class="col align-self-start">
+                <!-- POSTCARD FRONT  -->
+                <div class="postcardFront">
 
-        <img class=postcardImage style="background-image: url('')" style="background-size: 600px">
+                    <img class=postcardImage style="background-image: url('')">
 
-        <div class="postcardText">
+                    <div class="postcardText">
 
-            <p class=parkNameFront></p>
+                        <p class=parkNameFront></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col align-self-center">
+
+            </div>
+            <div class="col align-self-end">
+                <!--POSTCARD BACK -->
+                <div class="postcardBack">
+
+                    <p class="parkName"></p>
+
+                    <p class="parkLocation"></p>
+
+                    <a href='' class="parkWebsite" target="blank"></a>
+
+                    <div class="aboutPark absolute">
+                        <br>
+                        <p class="aboutPark"></p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
+    <br>
+    <br>
+    <br>
 
+    <hr>
+    <div class="wander">
+        <h1 id="footer">Not all those who wander are lost.</h1>
+    </div>
+    <hr>
 
     <!--THINGS TO-DO LIST-->
 
-    <div class="thingsList">
-        <ul class="activitesList">
+    <!-- <div class="card border-success mb-3" id="thingsList" style="max-width: 18rem;">
+        <div class="card-header" id="itinerary">ITINERARY</div>
+        <div class="card-body text-success">
+          <ul class="activitesList">
 
         </ul>
-    </div>
-
-    <!--POSTCARD BACK -->
-
-    <div class="postcardBack">
-
-        <p class="parkName"></p>
-
-        <p class="parkLocation"></p>
-
-        <a href='' class="parkWebsite"></a>
-
-        <div class="aboutPark absolute">
-            <br>
-            <p class="aboutPark"></p>
         </div>
-    </div>
-
-    <br>
-    <br>
+      </div> -->
 
     <script type="text/javascript" src="script.js"></script>
 </body>

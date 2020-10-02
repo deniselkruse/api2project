@@ -8,15 +8,15 @@ const searchForm = document.querySelector('form');
 
 const postcardBack = document.querySelector('.postcardBack')
 
-const activitiesList = document.querySelector('.thingsList');
+const activitiesList = document.querySelector('#thingsList');
 
 searchForm.addEventListener('submit', fetchResults);
 
 function fetchResults(e) {
     console.log(e);
     e.preventDefault();
-    url = baseURL + 'parks?' + 'limit=1' + '&api_key=' + key;
-    //How to Make it a Random Park?//
+    url = baseURL + 'parks?' + 'limit=497' + '&api_key=' + key;
+
     fetch(url)
         .then(res => res.json())
         .then(json => displayParkInfo(json))
@@ -24,38 +24,38 @@ function fetchResults(e) {
 
 function displayParkInfo(json) {
     console.log(json);
-    while (displayParkInfo.firstChild) {
-        displayParkInfo.removeChild(displayParkInfo.firstChild);
-    }
 
-    for (let i = 0; i < displayParkInfo.length; i++) {
+    const i = Math.floor(Math.random() * 497) + 1
 
-        let img = document.querySelector('.postcardImage'); // 
-        img.src = json.data[0].images[0].url;
-        console.log(json.data[0].images[0].url)
+    let img = document.querySelector('.postcardImage');
+    img.src = json.data[i].images[0].url;
+    console.log(json.data[i].images[0].url)
 
-        let parkNameFront = document.querySelector('.parkNameFront');
-        parkNameFront.innerText = json.data[0].name;
+    let parkNameFront = document.querySelector('.parkNameFront');
+    parkNameFront.innerText = json.data[i].name;
 
-        let parkName = document.querySelector('.parkName');
-        parkName.innerText = json.data[0].name;
-        console.log(json.data[0].name);
+    let parkName = document.querySelector('.parkName');
+    parkName.innerText = json.data[i].name;
+    console.log(json.data[i].name);
 
-        let parkLocation = document.querySelector('.parkLocation');
-        parkLocation.innerText = json.data[0].addresses[i].city + ', ' + json.data[0].addresses[i].stateCode;
+    let parkLocation = document.querySelector('.parkLocation');
+    parkLocation.innerText = json.data[i].addresses[0].city + ', ' + json.data[i].addresses[0].stateCode;
 
-        let parkWebsite = document.querySelector('.parkWebsite');
-        //figure out how to make it a clickable link!//
-        parkWebsite.innerHTML = json.data[0].url;
-        console.log(json.data[0].url);
+    let parkWebsite = document.querySelector('.parkWebsite');
+    //How to make it a clickable link!//
+    parkWebsite.innerHTML = json.data[i].url;
+    console.log(json.data[i].url);
 
-        let aboutPark = document.querySelector('.aboutPark');
-        aboutPark.innerHTML = json.data[0].description;
+    let aboutPark = document.querySelector('.aboutPark');
+    aboutPark.innerHTML = json.data[i].description;
 
+    let activities = json.data[i].activities;
+    console.log(activities);
 
+    activities.forEach(element => {
+        console.log(element.name)
         let activityItem = document.createElement('li');
-        activityItem.innerText = json.data[0].activities[0];
+        activityItem.innerText = element.name;
         activitiesList.appendChild(activityItem);
-        //List is not working//
-    }
+    })
 }
