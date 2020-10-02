@@ -44,6 +44,7 @@ function displayParkInfo(json) {
     let parkWebsite = document.querySelector('.parkWebsite');
     //How to make it a clickable link!//
     parkWebsite.innerHTML = json.data[i].url;
+    parkWebsite.href = json.data[i].url;
     console.log(json.data[i].url);
 
     let aboutPark = document.querySelector('.aboutPark');
